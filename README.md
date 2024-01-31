@@ -6,7 +6,6 @@ I have worked as a Systems Engineer for 12 years and shifted into a DevOps Engin
 ---------
 
 # Projects
-(Excuse the names as I love coffee too much)
 
 ## moka
 Working through Cloud Resource Challenge integrating DevOps tools - https://github.com/cloudresumechallenge/projects
