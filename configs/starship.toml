@@ -1,0 +1,68 @@
+# My Starship Config with coffee cup icon
+
+format = """
+[](fg:cyan)\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$azure\
+$kubernetes\
+$dotnet\
+$python\
+$rust\
+$cmd_duration $jobs $time\
+$line_break\
+$character"""
+command_timeout = 1000
+
+[fill]
+symbol = " "
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[󰅶 ](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[󰛊 ](bold red)'
+
+# Azure Module
+[azure]
+disabled = false
+format = 'on [$symbol($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue bold'
+
+# Enable the Kubernetes module
+[kubernetes]
+format='[$symbol$context( \($namespace\))]($style) '
+style = "red"
+disabled = false
+
+[dotnet]
+#symbol = ' '
+style = 'green'
+heuristic = false
+
+[python]
+symbol = " "
+pyenv_version_name = false
+
+[time]
+disabled = false
+style = "yellow"
+format = "[$time]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "yellow"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
